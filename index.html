@@ -480,7 +480,7 @@ form.enq .btn{width:100%;margin-top:1.2rem}
     <div class="sec-head rv">
       <p class="eyebrow">What we raise</p>
       <h2>Poultry From Our Farm</h2>
-      <p class="lede">Our current poultry products are listed below. Prices follow the prevailing market/government rate and may change daily. Contact us for today's rate and availability.</p>
+      <p class="lede">Our current poultry products are listed below. Prices shown below are the current rates shared by Sridhar Poultry. Rates may change; please confirm today's availability and rate before ordering.</p>
     </div>
     <div class="grid-3" id="prodGrid"></div>
   </div>
@@ -714,7 +714,7 @@ form.enq .btn{width:100%;margin-top:1.2rem}
         <p>By using this website or submitting an enquiry/order, you agree to provide accurate information and use the website for lawful purposes.</p>
         <ul>
           <li>Product availability is subject to current stock and farm operations.</li>
-          <li>Product prices are based on the prevailing market/government rate and may change daily. The current rate should be confirmed with Sridhar Poultry before finalising an order.</li>
+          <li>Product prices are based on the prevailing current rate and may change daily. The current rate should be confirmed with Sridhar Poultry before finalising an order.</li>
           <li>Submitting an enquiry through the website does not by itself guarantee product availability, price, delivery or acceptance of an order. The business will confirm these details directly.</li>
           <li>Customers are responsible for providing correct contact, quantity and delivery/pickup information.</li>
           <li>Order cancellation is accepted within 1 hour of placing the order. Requests after 1 hour may not be accepted.</li>
@@ -862,11 +862,11 @@ const BUSINESS = {
 const IMG = (f) => f;
 
 const PRODUCTS = [
-  { name:"Broiler Chicken", tag:"Market Rate", img:"photo-08.jpg", desc:"Broiler chicken supplied according to current availability and the prevailing market/government rate.", hover:"Today's rate changes with the market. Contact us for the latest rate and availability." },
-  { name:"Eggs – Wholesale", tag:"Wholesale", img:"photo-09.jpg", desc:"Wholesale egg supply for businesses and bulk requirements, subject to current availability and market rate.", hover:"Contact us for today's wholesale rate and available quantity." },
-  { name:"Chicks – Wholesale", tag:"Wholesale", img:"photo-11.jpg", desc:"Chicks supplied for wholesale requirements, subject to current availability and applicable market rate.", hover:"Contact us for today's availability and rate." },
-  { name:"Chicken", tag:"Market Rate", img:"photo-10.jpg", desc:"Chicken supply based on current availability and the prevailing market/government rate.", hover:"Contact us for today's rate, availability and quantity." },
-  { name:"Wholesale Poultry Supply", tag:"Bulk Supply", img:"photo-12.jpg", desc:"Wholesale poultry supply for businesses and bulk requirements, arranged after confirming availability and the current rate.", hover:"Send your requirement and quantity on WhatsApp." }
+  { name:"Broiler Chicken", tag:"Current Rate", img:"photo-08.jpg", price:"₹265 / bird", desc:"Each bird is approximately 2.3 kg. Current farm rate shared by Sridhar Poultry: ₹265 per bird.", hover:"Approx. 2.3 kg per bird • ₹265 per bird." },
+  { name:"Eggs – Wholesale", tag:"Wholesale", img:"photo-09.jpg", price:"₹6 / egg • ₹50,000 / 10,000 wholesale", desc:"Egg rate: ₹6 per egg. Wholesale rate shared by the farm: ₹50,000 for 10,000 eggs (₹5 per egg).", hover:"Regular: ₹6/egg • Wholesale: 10,000 eggs for ₹50,000 (₹5/egg)." },
+  { name:"Chicks – Wholesale", tag:"Wholesale", img:"photo-11.jpg", price:"₹35 / chick • ₹3,50,000 / 10,000 wholesale", desc:"Chicks are priced at ₹35 each. Wholesale rate shared by the farm: ₹3,50,000 for 10,000 chicks.", hover:"₹35/chick • Wholesale: 10,000 chicks for ₹3,50,000." },
+  { name:"Chicken", tag:"Current Rate", img:"photo-10.jpg", price:"₹250 / kg", desc:"Chicken supplied at the current farm rate of ₹250 per kg, subject to availability.", hover:"Current rate: ₹250 per kg." },
+  { name:"Wholesale Poultry Supply", tag:"Bulk Supply", img:"photo-12.jpg", price:"Chicken: ₹50,000 / 200 kg", desc:"Bulk chicken supply: 200 kg for ₹50,000 (₹250 per kg). Eggs and chicks are also available at the wholesale rates shown above.", hover:"Chicken: 200 kg • ₹50,000 • ₹250/kg. Eggs: 10,000 • ₹50,000. Chicks: 10,000 • ₹3,50,000." }
 ];
 
 const WHY = [
@@ -883,7 +883,7 @@ const STEPS = [
   { n:"02", t:"Quality Feed & Care", d:"Scheduled feeding, clean water and daily observation." },
   { n:"03", t:"Farm Management", d:"Cleaning, litter management and record keeping." },
   { n:"04", t:"Order / Enquiry", d:"Send your product, quantity and details through the website or WhatsApp." },
-  { n:"05", t:"Rate & Supply Confirmation", d:"We confirm availability and the current market/government rate before finalising supply." }
+  { n:"05", t:"Rate & Supply Confirmation", d:"We confirm availability and the current rate before finalising supply." }
 ];
 
 const GALLERY = [
@@ -903,7 +903,7 @@ const GALLERY = [
 
 const FAQS = [
   ["What poultry products are available?","We currently offer Broiler Chicken, Eggs – Wholesale, Chicks – Wholesale, Chicken and Wholesale Poultry Supply, subject to availability."],
-  ["How are product prices decided?","Prices follow the prevailing market/government rate and may change daily. Please contact us for the latest rate before placing an order."],
+  ["How are product prices decided?","The prices shown are the current rates shared by Sridhar Poultry. Rates may change, so please confirm the rate and availability before placing an order."],
   ["Can I place an order through the website?","Yes. You can submit your requirement through the website enquiry form. Your details and requirement will open in WhatsApp for confirmation."],
   ["How does the order process work?","Submit your name, phone number, product, quantity, address and message through the enquiry form. We will confirm availability and the current rate with you. Payment can then be made directly to the business through the payment method shared by the business."],
   ["Can I cancel an order?","Cancellation is accepted within 1 hour of placing the order. Requests after 1 hour may not be accepted."],
@@ -928,7 +928,7 @@ const MSG = {
 
 I would like to enquire about your poultry products.
 
-Please share today's current market/government rate and availability.`,
+Please share today's current rate and availability.`,
   bulk: `Hello ${BUSINESS.name},
 
 I'm interested in bulk / wholesale poultry supply.
@@ -938,7 +938,7 @@ Please share today's current rate, availability and supply options.`,
 
 I'm interested in ${p}.
 
-Please share today's current market/government rate and availability.`
+Please share today's current rate and availability.`
 };
 
 /* ============================================================
@@ -979,8 +979,8 @@ function renderProducts(){
       <div class="pcard-body">
         <h3>${esc(p.name)}</h3>
         <p>${esc(p.desc)}</p>
-        <p style="font-weight:700;color:var(--forest);margin-top:.2rem">Price: Current Market / Government Rate</p>
-        <p style="font-size:.82rem;color:var(--muted)">Rates may change daily. Contact us for today's price.</p>
+        <p style="font-weight:700;color:var(--forest);margin-top:.2rem">${esc(p.price)}</p>
+        <p style="font-size:.82rem;color:var(--muted)">Current rate shared by Sridhar Poultry. Rates may change; please confirm before ordering.</p>
         <p style="font-size:.85rem;color:var(--muted);display:none" class="mob-hint">${esc(p.hover)}</p>
         <a class="btn btn-ghost" target="_blank" rel="noopener" href="${waLink(MSG.product(p.name))}">Get Today's Rate</a>
       </div>
@@ -1160,7 +1160,7 @@ ${address}
 Additional Message:
 ${msg || "-"}
 
-Please confirm today's current market/government rate, availability and the next steps.`;
+Please confirm today's current rate, availability and the next steps.`;
 
     window.open(waLink(text), '_blank', 'noopener');
   });
